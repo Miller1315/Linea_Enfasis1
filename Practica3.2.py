@@ -1,16 +1,41 @@
+# Real
 from prettytable import PrettyTable
 
 tabla_c = PrettyTable()
 tabla_a= PrettyTable()
 def init():
-    factor_s=float(input("Ingrese factor de servicio entre 1 y 3: "))
-    while factor_s<1 or factor_s>3:
-        factor_s=float(input("Datos incorrectos \nIngrese factor de servicio entre 1 y 3: "))      
+    while True:
+        try:
+            factor_s=float(input("Ingrese factor de servicio entre 1 y 3: "))
+            while factor_s<1 or factor_s>3:
+                factor_s=float(input("Datos incorrectos \nIngrese factor de servicio entre 1 y 3: "))      
+            break
+        
+        except ValueError:
+            print("\033[4;31m"+ "El número ingresado no es un número decimal. Inténtalo de nuevo." + "\033[0;m")
 
-    caudal=float(input("Ingrese caudal: "))
-    temp_e=float(input("Ingrese temperatura de entrada: "))
-    temp_s=float(input("Ingrese temperatura de salida "))
-                        
+    
+    while True:
+        try:
+            caudal=float(input("Ingrese caudal: "))
+            break
+        except ValueError:
+            print("\033[4;31m"+ "El número ingresado no es un número decimal. Inténtalo de nuevo." + "\033[0;m")
+
+    while True:
+        try:
+            temp_e=float(input("Ingrese temperatura de entrada: "))
+            break
+        except ValueError:
+            print("\033[4;31m"+ "El número ingresado no es un número decimal. Inténtalo de nuevo." + "\033[0;m")
+
+    while True:
+        try:
+            temp_s=float(input("Ingrese temperatura de salida "))
+            break
+        except ValueError:
+            print("\033[4;31m"+ "El número ingresado no es un número decimal. Inténtalo de nuevo." + "\033[0;m")
+
     const1=1000
     const2=0.0003069
     #********************
@@ -30,12 +55,52 @@ def chiller(tamañodt):
     print("Favor indicar cantidad y lea con detenimiento \n")
     print("__________________________________________________________ \n")
 
-    c500 = int(input("Ingrese cantidad para 500TR centrífugos: "))
-    c750 = int(input("Ingrese cantidad para 750TR centrífugos: "))
-    c1000 = int(input("Ingrese cantidad para 1000TR centrífugos: "))
-    aa500 = int(input("Ingrese cantidad para 500TR Absorción: "))
-    a750 = int(input("Ingrese cantidad para 750TR Absorción: "))
-    a1000 = int(input("Ingrese cantidad para 1000TR Absorción: "))
+    while True:
+        try:
+            c500 = int(input("Ingrese cantidad para 500TR centrífugos: "))
+            break
+        except ValueError:
+            print("\033[4;31m"+ "El número ingresado no es un número entero. Inténtalo de nuevo." + "\033[0;m")
+
+    while True:
+        try:
+            c750 = int(input("Ingrese cantidad para 750TR centrífugos: "))
+            break
+        except ValueError:
+            print("\033[4;31m"+ "El número ingresado no es un número entero. Inténtalo de nuevo." + "\033[0;m")
+
+    while True:
+        try:
+            c1000 = int(input("Ingrese cantidad para 1000TR centrífugos: "))
+            break
+        except ValueError:
+            print("\033[4;31m"+ "El número ingresado no es un número entero. Inténtalo de nuevo." + "\033[0;m")
+
+
+    while True:
+        try:
+            aa500 = int(input("Ingrese cantidad para 500TR Absorción: "))
+
+            break
+        except ValueError:
+            print("\033[4;31m"+ "El número ingresado no es un número entero. Inténtalo de nuevo." + "\033[0;m")
+
+
+    while True:
+        try:
+            a750 = int(input("Ingrese cantidad para 750TR Absorción: "))
+
+            break
+        except ValueError:
+            print("\033[4;31m"+ "El número ingresado no es un número entero. Inténtalo de nuevo." + "\033[0;m")
+
+
+    while True:
+        try:
+            a1000 = int(input("Ingrese cantidad para 1000TR Absorción: "))
+            break
+        except ValueError:
+            print("\033[4;31m"+ "El número ingresado no es un número entero. Inténtalo de nuevo." + "\033[0;m")
 
     #********************
     c500 = 2
@@ -69,8 +134,6 @@ def chiller(tamañodt):
         print(total_c) 
         centrifugos(total_c)
         absorcion(total_a)     
-
-
 
 ###################
 
