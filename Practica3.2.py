@@ -38,13 +38,6 @@ def init():
 
     const1=1000
     const2=0.0003069
-    #********************
-    caudal=774
-    temp_e= 10
-    temp_s=5.5
-    factor_s=1.6
-    #Resultado 1710 
-    #********************
     tamañoDT=int(caudal*(temp_e-temp_s)*factor_s*const1*const2)
     print("Tamaño del distrito termico es: ",tamañoDT)
 
@@ -102,16 +95,6 @@ def chiller(tamañodt):
         except ValueError:
             print("\033[4;31m"+ "El número ingresado no es un número entero. Inténtalo de nuevo." + "\033[0;m")
 
-    #********************
-    c500 = 2
-    c750 = 0
-    c1000 =0
-    aa500 = 2
-    a750 = 0
-    a1000 = 0
-
-    #********************
-
     total_c=(500*c500)+(750*c750)+(1000*c1000)
     total_a=(500*aa500)+(750*a750)+(1000*a1000)
     total_ch=total_c+total_a
@@ -134,9 +117,6 @@ def chiller(tamañodt):
         print(total_c) 
         centrifugos(total_c)
         absorcion(total_a)     
-
-###################
-
 
 def centrifugos(parametro1):
     # 1000
@@ -169,8 +149,8 @@ def absorcion(parametro2):
     c=((parametro2 * 0.0035174111853)*(1925000/0.88)) #7.694.336,96784375	
     o=c*0.03 # 230.830		
     
-    capex=parametro2*0.0035174111853 # 3,5174111853 //No cuadra del todo	
-    ft=(capex*1000000)*1.015 #1.015.000.000 //no cuadra		
+    capex=parametro2*0.0035174111853 # 3,5174111853 
+    ft=(capex*1000000)*1.015 #1.015.000.000 	
     b=capex*2000000 # 7.034.822,3706
 
     tabla_a.field_names = ["Energía", "Emisiones", "Capex", "Opex"]
