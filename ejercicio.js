@@ -20,6 +20,12 @@ function btnOnClick() {
     const sumaInputs= caudal2*(temp_e2-temp_s2)*factor_servicio2*conts1*conts2
 
     pResult.innerText = "Resultado: " + sumaInputs;
+    //factor <= 1 = 
+    if(factor_servicio2 < 1 || factor_servicio2 >  3){
+       alert("El factor de servicio debe estar entre 1 y 3")
+       pResult.innerText = " " ;
+    }
+
     }
 
 
@@ -64,22 +70,6 @@ function btnOnClick2() {
     totales = totala + totalc
 
     pResult2.innerText = "Resultado: " + totales;
-
-    //centrifugo
-    // let rp1a =Number(rp1.value)
-    // let g1a =Number(g1.value)
-    // let c1a =Number(c1.value)
-    // let o1a =Number(o1.value)
-    // let ft1a =Number(ft1.value)
-    // let e1a =Number(e1.value)
-    // let b1a =Number(b1.value)
-
-    // let g2b =Number(g2.value)
-    // let c2b =Number(c2.value)
-    // let o2b =Number(o2.value)
-    // let capex2b =Number(capex2.value)
-    // let b2b =Number(rp1.value)
-
 
     rrp1=totalc*0.3190995427365	
     rg1=(totalc*511.13199046407)/1000	
