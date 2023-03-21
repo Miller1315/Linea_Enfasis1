@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <title>Document</title>
+
+</head>
+<body>
+  <label for="factor-servicio">Ingresar factor de servicio entre 1 y 3:</label>
+  <input type="number" id="factor-servicio" style="width: 50px">
+
+  <label for="caudal">Ingresar caudal</label>
+  <input type="number" id="caudal" style="width:50px">
+  
+  <label for="tentrada">Ingresar Temp entrada</label>
+  <input type="number" id="tentrada" style="width:50px">
+
+  <label for="tsalida">Ingresar Temp salida</label>
+  <input type="number" id="tsalida" style="width:50px">
+
+  <br></br>
+  <button id="btnCalcular" onclick="btnOnClick()">Calcular tamaño del distrito termico </button>  
+  <p id="result"></p>
+
+
+
+    <p>Tamaños de chillers Centrífugos y de Absorción 500TR, 750TR, 1000TR</p>
+    <label for="centrifugo-500">Ingrese cantidad para 500TR centrífugos:</label>
+    <input type="number" id="centrifugo-500" style="width: 50px">
+
+    <label for="centrifugo-750" >Ingrese cantidad para 750TR centrífugos:</label>
+    <input type="number" id="centrifugo-750" style="width: 50px">
+    <br></br>
+
+    <label for="centrifugo-1000" >Ingrese cantidad para 1000TR centrífugos:</label>
+    <input type="number" id="centrifugo-1000" style="width: 50px">
+    
+    <label for="absorcion-500">Ingrese cantidad para 500TR Absorción:</label>
+    <input type="number" id="absorcion-500" style="width: 50px">
+    <br></br>
+    <label for="absorcion-750">Ingrese cantidad para 750TR Absorción:</label>
+    <input type="number" id="absorcion-750" style="width: 50px">
+
+    <label for="absorcion-1000" >Ingrese cantidad para 1000TR Absorción:</label>
+    <input type="number" id="absorcion-1000" style="width: 50px">
+
+
+    
+    <!-- <button id="btn-terminar">Terminar</button> -->
+
+
+	<!-- <button onclick="mostrarNombre()">Mostrar nombre</button> -->
+
+
+<h3>Centrífugo</h3>    
+    <table>
+        <tr>
+          <th>Energía</th>
+          <th>Emisiones CO2</th>
+          <th>Capex</th>
+          <th>Opex</th>
+        </tr>
+        <tr>
+          <td class="subt">Red publica</td>
+          <td id="rp1">1,2</td>
+          <td>1,4</td>
+          <td>1,4</td>
+        </tr>
+        <tr>
+          <td class="subt">Microturbina a gas</td>
+          <td id="g1">2,2</td>
+          <td id="c1">2,3</td>
+          <td id="o1">2,4</td>
+        </tr>
+        <tr>
+          <td class="subt">Solar fotovoltaica</td>
+          <td>3,2</td>
+          <td id="ft1">3,3</td>
+          <td>3,4</td>
+        </tr>
+        <tr>
+          <td class="subt">Energia eolica</td>
+          <td>4,2</td>
+          <td id="e1">4,3</td>
+          <td>4,4</td>
+        </tr>
+        <tr>
+          <td class="subt">Energia biomasa</td>
+          <td>5,2</td>
+          <td id="b1">5,3</td>
+          <td>5,4</td>
+        </tr>
+      </table>
+
+<h3>Absorción</h3>
+	<table id="tabla2">
+        <tr>
+          <th>Energía</th>
+          <th>Emisiones Co2</th>
+          <th>Capex</th>
+          <th>Opex</th>
+        </tr>
+        <tr>
+          <td class="subt">Microturbina a gas</td>
+          <td id="g2"></td>
+          <td id="c2"></td>
+          <td id="o2"></td>
+        </tr>
+        <tr>
+          <td class="subt">Solar termica</td>
+          <td>2,2</td>
+          <td id="capex2"></td>
+          <td>2,4</td>
+        </tr>
+        <tr>
+          <td class="subt">Energia biomasa</td>
+          <td>3,2</td>
+          <td id="b2"></td>
+          <td>3,4</td>
+        </tr>
+      </table>
+      <script src="./ejercicio.js"></script>
+      
+</body>
+</html>
