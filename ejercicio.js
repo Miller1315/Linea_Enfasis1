@@ -33,6 +33,22 @@ let absorcion_1000 = document.querySelector("#absorcion-1000");
 let btn2 = document.querySelector('#btnCalcular2');
 let pResult2 = document.querySelector('#result2');
 
+//Casillas centrifugo y absorcion
+let rp1 = document.querySelector('#rp1');
+let g1 = document.querySelector('#g1');
+let c1 = document.querySelector('#c1');
+let o1 = document.querySelector('#o1');
+let ft1 = document.querySelector('#ft1');
+let e1 = document.querySelector('#e1');
+let b1 = document.querySelector('#b1');
+
+
+let g2 = document.querySelector('#g2');
+let c2 = document.querySelector('#c2');
+let o2 = document.querySelector('#o2');
+let capex2 = document.querySelector('#capex2');
+let b2 = document.querySelector('#b2');
+
 
 function btnOnClick2() {
 
@@ -48,4 +64,62 @@ function btnOnClick2() {
     totales = totala + totalc
 
     pResult2.innerText = "Resultado: " + totales;
+
+    //centrifugo
+    // let rp1a =Number(rp1.value)
+    // let g1a =Number(g1.value)
+    // let c1a =Number(c1.value)
+    // let o1a =Number(o1.value)
+    // let ft1a =Number(ft1.value)
+    // let e1a =Number(e1.value)
+    // let b1a =Number(b1.value)
+
+    // let g2b =Number(g2.value)
+    // let c2b =Number(c2.value)
+    // let o2b =Number(o2.value)
+    // let capex2b =Number(capex2.value)
+    // let b2b =Number(rp1.value)
+
+
+    rrp1=totalc*0.3190995427365	
+    rg1=(totalc*511.13199046407)/1000	
+    rc1=(totalc*0.0035174111853)*(1925000/0.88)	
+    ro1=rc1*0.03	
+    	
+    rcapex1=totalc*0.0035174111853
+    rft1=rcapex1*1000000	
+    re1=rcapex1*1700000	
+    rb1=rcapex1*2000000
+
+    //Absorción
+    rg2=(totala*511.13199046407)/1000		
+    rc2=((totala * 0.0035174111853)*(1925000/0.88))		
+    ro2=rc2*0.03		
+  		
+    rcapex2=totala*0.0035174111853		
+    rft2=(rcapex2*1000000)*1.015		
+    rb2=rcapex2*2000000 	
+    
+
+    pResult2.innerText = "Resultado: " + totales;
+    rp1.innerText = rrp1;
+    g1.innerText = rg1;
+    c1.innerText = rc1;
+    o1.innerText = ro1;
+    ft1.innerText = rft1;
+    e1.innerText = re1;
+    b1.innerText = rb1;
+
+    g2.innerText = rg2;
+    c2.innerText = rc2;
+    o2.innerText = ro2;
+    capex2.innerText = rcapex2;
+    b2.innerText = rb2;
+
+
+    
     }
+
+
+
+    
